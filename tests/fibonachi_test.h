@@ -78,5 +78,4 @@ TEST(find_roots_test, suite3)
     ASSERT_EQ(2, 2);
 }
 
-
 #endif // FIBONACHI_H
