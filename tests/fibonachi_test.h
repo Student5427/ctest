@@ -70,5 +70,13 @@ TEST(find_roots_test, suite2)
     ASSERT_EQ(arr[2], 2);
 }
 
+TEST(find_roots_test, suite3)
+{
+    double *arr = find_roots(1,2,-3);
+    ASSERT_EQ(1, 1);
+    ASSERT_EQ(-3, -3);
+    ASSERT_EQ(2, 2);
+}
+
 
 #endif // FIBONACHI_H
