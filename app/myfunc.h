@@ -5,6 +5,8 @@ int myfunc(int b);
 
 int fibonachi(int num);
 
+double* find_roots(double a,double b,double c);
+
 void printStdoutMessages();
 
 extern int val;

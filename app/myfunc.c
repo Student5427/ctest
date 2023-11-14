@@ -16,6 +16,9 @@ int fibonachi(int num) {
     int prev = 1;
     int next = 1;
 
+    if (num == 0)
+        return 1;
+
     if (num < 0)
         return 0;
 
@@ -36,3 +39,35 @@ void printStdoutMessages() {
     printf("This is a test message from myfunc.c\n");
     printf("Do not disturb\n");
 }
+
+
+double* find_roots(double a,double b,double c)
+{
+    int d = b * b - 4 * a * c; 
+    
+    double x1,x2 = 0;
+    double number = 0;
+
+    double *temp = (double*) malloc(sizeof(double) * 3);
+    
+    double sqrt_val = sqrt(abs(d));
+    
+    if (d > 0) { 
+        printf("Roots are real and different\n"); 
+        x1 = (double)((-b + sqrt_val) / (2 * a)); 
+        x2 = (double)((-b - sqrt_val) / (2 * a)); 
+        number = 2;
+    }
+    else if (d == 0) { 
+        printf("Roots are real and same\n"); 
+        x1 = (double)b / (2 * a) * (-1); 
+        number = 1;
+    } 
+    
+    *temp = x1;
+    *(temp + 1) = x2;
+    *(temp + 2) = number;
+ 
+    return temp;
+}
+

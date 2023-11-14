@@ -26,6 +26,7 @@ TEST(fibonachiTest, negative) {
     ASSERT_EQ(fibonachi(-1), 0);
 }
 
+
 TEST(fibonachiTest, inputFile) {
     val = 2;
     char *filename = (char *)malloc(sizeof(char) * 1024);
@@ -51,5 +52,23 @@ TEST(fibonachiTest, inputFile) {
     ret = fibonachi(input);
     ASSERT_EQ(ret, output);
 }
+
+TEST(find_roots_test, suite1)
+{
+    double *arr = find_roots(4,-1,-5);
+    ASSERT_EQ(arr[0], 1.25);
+    ASSERT_EQ(arr[1], -1);
+    ASSERT_EQ(arr[2], 2);
+
+}
+
+TEST(find_roots_test, suite2)
+{
+    double *arr = find_roots(1,2,-3);
+    ASSERT_EQ(arr[0], 1);
+    ASSERT_EQ(arr[1], -3);
+    ASSERT_EQ(arr[2], 2);
+}
+
 
 #endif // FIBONACHI_H
