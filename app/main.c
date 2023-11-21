@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 #include "myfunc.h"
 
 int main()
@@ -8,5 +8,5 @@ int main()
     find_roots(roots, 3, 1, 2);
     printf("Hello World!\n");
     printf("x1 = %lf, x2 = %lf, number = %lf", arr[0], arr[2], arr[3]);
-    return myfunc(2);
+    return 0;
 }
