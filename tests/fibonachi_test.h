@@ -59,6 +59,7 @@ TEST(find_roots_test, suite1)
     ASSERT_EQ(arr[0], 1.25);
     ASSERT_EQ(arr[1], -1);
     ASSERT_EQ(arr[2], 2);
+    free(arr);
 
 }
 
@@ -68,6 +69,7 @@ TEST(find_roots_test, suite2)
     ASSERT_EQ(arr[0], 1);
     ASSERT_EQ(arr[1], -3);
     ASSERT_EQ(arr[2], 2);
+    free(arr);
 }
 
 TEST(find_roots_test, suite3)
@@ -76,6 +78,7 @@ TEST(find_roots_test, suite3)
     ASSERT_EQ(1, 1);
     ASSERT_EQ(-3, -3);
     ASSERT_EQ(2, 2);
+    free(arr);
 }
 
 #endif // FIBONACHI_H
