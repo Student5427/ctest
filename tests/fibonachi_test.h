@@ -66,8 +66,8 @@ TEST(mytestB, suite1)
 { 
     double* roots = (double*)malloc(2 * sizeof(double)); 
     find_roots(roots, 1, -5, 6); 
-    ASSERT_EQ(roots[0], 3.00); 
-    ASSERT_EQ(roots[1], 5.00); 
+    ASSERT_EQ(roots[0], 3); 
+    ASSERT_EQ(roots[1], 5); 
     free(roots); 
 }
 
@@ -75,8 +75,8 @@ TEST(mytestB, suite2)
 { 
     double* roots = (double*)malloc(2 * sizeof(double)); 
     find_roots(roots, 1, 2, -3); 
-    ASSERT_EQ(roots[0], 1.00); 
-    ASSERT_EQ(roots[1], -3.00); 
+    ASSERT_EQ(roots[0], 1); 
+    ASSERT_EQ(roots[1], -3); 
     free(roots); 
 }
 
