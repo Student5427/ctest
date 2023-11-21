@@ -34,7 +34,7 @@ void printStdoutMessages() {
 }
 
 
-void myfunc(double* roots, double a, double b, double c) {    double discriminant = b * b - 4 * a * c;
+void find_roots(double* roots, double a, double b, double c) {    double discriminant = b * b - 4 * a * c;
     if (discriminant < 0) { roots[0] = NAN;
  roots[1] = NAN;    } else if (discriminant == 0) {
         roots[0] = -b / (2 * a); roots[1] = NAN;
