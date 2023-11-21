@@ -3,13 +3,6 @@
 #include <stdlib.h>
 #include "myfunc.h"
 
-int myfunc(int b) {
-    char *buffer = malloc(sizeof(char) * 1000);
-    buffer [0] = b + 4;
-    // здесь должен ругаться sonarcloud, т.к. утечка памяти
-    return buffer[0];
-}
-
 int val;
 
 int fibonachi(int num) {
@@ -41,33 +34,12 @@ void printStdoutMessages() {
 }
 
 
-double* find_roots(double a,double b,double c)
-{
-    int d = b * b - 4 * a * c; 
-    
-    double x1,x2 = 0;
-    double number = 0;
-
-    double *temp = (double*) malloc(sizeof(double) * 3);
-    
-    double sqrt_val = sqrt(abs(d));
-    
-    if (d > 0) { 
-        printf("Roots are real and different\n"); 
-        x1 = (double)((-b + sqrt_val) / (2 * a)); 
-        x2 = (double)((-b - sqrt_val) / (2 * a)); 
-        number = 2;
-    }
-    else if (d == 0) { 
-        printf("Roots are real and same\n"); 
-        x1 = (double)b / (2 * a) * (-1); 
-        number = 1;
-    } 
-    
-    *temp = x1;
-    *(temp + 1) = x2;
-    *(temp + 2) = number;
- 
-    return temp;
+void myfunc(double* roots, double a, double b, double c) {    double discriminant = b * b - 4 * a * c;
+    if (discriminant < 0) { roots[0] = NAN;
+ roots[1] = NAN;    } else if (discriminant == 0) {
+        roots[0] = -b / (2 * a); roots[1] = NAN;
+    } else {        double root1 = (-b + sqrt(discriminant)) / (2 * a);
+        double root2 = (-b - sqrt(discriminant)) / (2 * a); roots[0] = root1;
+ roots[1] = root2;    }
 }
 
