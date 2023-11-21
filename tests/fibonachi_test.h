@@ -56,7 +56,7 @@ TEST(fibonachiTest, inputFile) {
 TEST(mytestB, suite0) 
 { 
     double* roots = (double*)malloc(2 * sizeof(double)); 
-    myfunc(roots, 4, -1, -5); 
+    find_roots(roots, 4, -1, -5); 
     ASSERT_EQ(roots[0], 1.25); 
     ASSERT_EQ(roots[1], -1.00); 
     free(roots); 
@@ -65,7 +65,7 @@ TEST(mytestB, suite0)
 TEST(mytestB, suite1) 
 { 
     double* roots = (double*)malloc(2 * sizeof(double)); 
-    myfunc(roots, 1, -5, 6); 
+    find_roots(roots, 1, -5, 6); 
     ASSERT_EQ(roots[0], 3.00); 
     ASSERT_EQ(roots[1], 5.00); 
     free(roots); 
@@ -74,7 +74,7 @@ TEST(mytestB, suite1)
 TEST(mytestB, suite2) 
 { 
     double* roots = (double*)malloc(2 * sizeof(double)); 
-    myfunc(roots, 1, 2, -3); 
+    find_roots(roots, 1, 2, -3); 
     ASSERT_EQ(roots[0], 1.00); 
     ASSERT_EQ(roots[1], -3.00); 
     free(roots); 
