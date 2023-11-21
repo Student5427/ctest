@@ -53,32 +53,32 @@ TEST(fibonachiTest, inputFile) {
     ASSERT_EQ(ret, output);
 }
 
-TEST(find_roots_test, suite1)
-{
-    double *arr = find_roots(4,-1,-5);
-    ASSERT_EQ(arr[0], 1.25);
-    ASSERT_EQ(arr[1], -1);
-    ASSERT_EQ(arr[2], 2);
-    free(arr);
-
+TEST(mytestB, suite0) 
+{ 
+    double* roots = (double*)malloc(2 * sizeof(double)); 
+    myfunc(roots, 4, -1, -5); 
+    ASSERT_EQ(roots[0], 1.25); 
+    ASSERT_EQ(roots[1], -1.00); 
+    free(roots); 
 }
 
-TEST(find_roots_test, suite2)
-{
-    double *arr = find_roots(1,2,-3);
-    ASSERT_EQ(arr[0], 1);
-    ASSERT_EQ(arr[1], -3);
-    ASSERT_EQ(arr[2], 2);
-    free(arr);
+TEST(mytestB, suite1) 
+{ 
+    double* roots = (double*)malloc(2 * sizeof(double)); 
+    myfunc(roots, 1, -5, 6); 
+    ASSERT_EQ(roots[0], 3.00); 
+    ASSERT_EQ(roots[1], 5.00); 
+    free(roots); 
 }
 
-TEST(find_roots_test, suite3)
-{
-    double *arr = find_roots(1,2,-3);
-    ASSERT_EQ(1, 1);
-    ASSERT_EQ(-3, -3);
-    ASSERT_EQ(2, 2);
-    free(arr);
+TEST(mytestB, suite2) 
+{ 
+    double* roots = (double*)malloc(2 * sizeof(double)); 
+    myfunc(roots, 1, 2, -3); 
+    ASSERT_EQ(roots[0], 1.00); 
+    ASSERT_EQ(roots[1], -3.00); 
+    free(roots); 
 }
+
 
 #endif // FIBONACHI_H
