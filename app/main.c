@@ -7,6 +7,6 @@ int main()
     double* roots = (double*)malloc(2 * sizeof(double)); 
     find_roots(roots, 3, 1, 2);
     printf("Hello World!\n");
-    printf("x1 = %lf, x2 = %lf, number = %lf", arr[0], arr[2], arr[3]);
+    printf("x1 = %lf, x2 = %lf,  roots[0], roots[1]);
     return 0;
 }
