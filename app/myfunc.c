@@ -29,11 +29,6 @@ int fibonachi(int num) {
     return next;
 }
 
-void printStdoutMessages() {
-    printf("This is a test message from myfunc.c\n");
-    printf("Do not disturb\n");
-}
-
 
 void find_roots(double* roots, double a, double b, double c) {    double discriminant = b * b - 4 * a * c;
     if (discriminant < 0) { roots[0] = NAN;
