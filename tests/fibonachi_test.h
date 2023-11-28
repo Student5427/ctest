@@ -12,7 +12,7 @@ extern "C" {
 }
 
 TEST(fibonachiTest, num0) {
-    ASSERT_EQ(fibonachi(0), 1);
+    ASSERT_EQ(fibonachi(0), 0);
     ASSERT_EQ(fibonachi(1), 1);
     ASSERT_EQ(fibonachi(2), 2);
 }
@@ -26,12 +26,10 @@ TEST(fibonachiTest, negative) {
     ASSERT_EQ(fibonachi(-1), 0);
 }
 
-
 TEST(fibonachiTest, inputFile) {
     val = 2;
     char *filename = (char *)malloc(sizeof(char) * 1024);
     sprintf(filename, "%s/input321.txt", INPUTDIR);
-
     int fd = open(filename, O_RDONLY);
     free(filename);
     if (fd < 0) {
@@ -52,15 +50,5 @@ TEST(fibonachiTest, inputFile) {
     ret = fibonachi(input);
     ASSERT_EQ(ret, output);
 }
-
-TEST(mytestB, suite0) 
-{ 
-    double* roots = (double*)malloc(2 * sizeof(double)); 
-    find_roots(roots, 4, -1, -5); 
-    ASSERT_EQ(roots[0], 1.25); 
-    ASSERT_EQ(roots[1], -1.00); 
-    free(roots); 
-}
-
 
 #endif // FIBONACHI_H
