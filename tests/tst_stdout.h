@@ -16,7 +16,7 @@ extern "C" {
 
 #define MAXLINE 1024
 
- TEST(TestStdOut, TestStdOut) {
+TEST(TestStdOut, TestStdOut) {
     // тест проверки вывода на экран нужных фраз с помощью перехвата потока (dup/dup2) и побайтового сравнения результатов
 
     // запоминаем старый поток вывода
@@ -46,7 +46,7 @@ extern "C" {
 
     // открываем оригинал и результат
     char *filename = static_cast<char*>(malloc(sizeof(char) * 1024));
-    sprintf(filename, sizeof(filename), "%s/TestSTDOut_output.txt", INPUTDIR);
+    sprintf(filename, "%s/TestSTDOut_output.txt", INPUTDIR);
     int testFd = open("TestStdOut_TestStdOut.out", O_RDONLY);
     int originFd = open(filename, O_RDONLY);
     free(filename);
@@ -73,9 +73,9 @@ extern "C" {
     // все отлично, закрываем
     close(testFd);
     close(originFd);
-} 
+}
 
- TEST(TestStdOut, usingCapture) {
+TEST(TestStdOut, usingCapture) {
     // тест проверки вывода на экран нужных фраз с помощью библиотеки STD и gtest Capture
 
     // подключаем захват вывода
@@ -99,6 +99,10 @@ extern "C" {
 
     // сравниваем значения
     ASSERT_EQ(output, content);
+    f.close();
+}
+
+#endif // TST_STDOUT_H
     f.close();
 } 
 
