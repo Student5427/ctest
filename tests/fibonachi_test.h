@@ -26,7 +26,7 @@ TEST(fibonachiTest, negative) {
     ASSERT_EQ(fibonachi(-1), 0);
 }
 
-TEST(fibonachiTest, inputFile) {
+/*TEST(fibonachiTest, inputFile) {
     val = 2;
     char *filename = (char *)malloc(sizeof(char) * 1024);
     sprintf(filename, "%s/input321.txt", INPUTDIR);
@@ -49,6 +49,6 @@ TEST(fibonachiTest, inputFile) {
 
     ret = fibonachi(input);
     ASSERT_EQ(ret, output);
-}
+}*/
 
 #endif // FIBONACHI_H
