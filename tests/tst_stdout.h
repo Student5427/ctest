@@ -16,7 +16,7 @@ extern "C" {
 
 #define MAXLINE 1024
 
-TEST(TestStdOut, TestStdOut) {
+/* TEST(TestStdOut, TestStdOut) {
     // тест проверки вывода на экран нужных фраз с помощью перехвата потока (dup/dup2) и побайтового сравнения результатов
 
     // запоминаем старый поток вывода
@@ -52,7 +52,7 @@ TEST(TestStdOut, TestStdOut) {
     free(filename);
 
     ASSERT_NE(testFd, -1);
-    //ASSERT_NE(originFd, -1);
+    ASSERT_NE(originFd, -1);
 
     // подготовка к чтению данных
     int outputCount;
@@ -73,7 +73,7 @@ TEST(TestStdOut, TestStdOut) {
     // все отлично, закрываем
     close(testFd);
     close(originFd);
-}
+} */
 
 TEST(TestStdOut, usingCapture) {
     // тест проверки вывода на экран нужных фраз с помощью библиотеки STD и gtest Capture
