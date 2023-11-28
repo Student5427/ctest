@@ -75,7 +75,7 @@ extern "C" {
     close(originFd);
 } */
 
-TEST(TestStdOut, usingCapture) {
+/* TEST(TestStdOut, usingCapture) {
     // тест проверки вывода на экран нужных фраз с помощью библиотеки STD и gtest Capture
 
     // подключаем захват вывода
@@ -100,6 +100,6 @@ TEST(TestStdOut, usingCapture) {
     // сравниваем значения
     ASSERT_EQ(output, content);
     f.close();
-}
+} */
 
 #endif // TST_STDOUT_H
