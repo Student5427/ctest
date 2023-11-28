@@ -46,7 +46,7 @@ extern "C" {
 
     // открываем оригинал и результат
     char *filename = static_cast<char*>(malloc(sizeof(char) * 1024));
-    snprintf(filename, sizeof(filename), "%s/TestSTDOut_output.txt", INPUTDIR);
+    sprintf(filename, sizeof(filename), "%s/TestSTDOut_output.txt", INPUTDIR);
     int testFd = open("TestStdOut_TestStdOut.out", O_RDONLY);
     int originFd = open(filename, O_RDONLY);
     free(filename);
