@@ -103,7 +103,3 @@ TEST(TestStdOut, usingCapture) {
 }
 
 #endif // TST_STDOUT_H
-    f.close();
-} 
-
-#endif // TST_STDOUT_H
